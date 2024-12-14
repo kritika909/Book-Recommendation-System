@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/9d63a7fb7b.js" crossorigin="anonymous"></script>
+    <title>Scribble</title>   
+</head>
+<body>
+   <div class="container">
+    <div class="title">
+        <p>LOG IN</p>
+    </div>
+
+    <div>
+        <style>
+            p{
+                color: red;
+                font-family: 'Poppins';
+                font-size: 16px;
+            }
+        </style>
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    
+    <form action="" method="POST" class="form">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Enter Username" required>
+
+        <label for="pwd">Password</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+
+        <button type="submit">LOG IN</button>
+
+    </form>
+    <div class="signup">
+        <a href="/signup">Don't have an account? Create One</a>
+    </div>
+
+   </div>
+
+</body>

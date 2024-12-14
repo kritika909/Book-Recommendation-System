@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    
+    <div class="desc">
+        <div class="image">
+            <img src="{{bookDetails.immage.url}}" alt="{{bookDetails.title}}">
+        </div>
+        <div class="info">
+            <p class="t1">{{bookDetails.title}}</p>
+            <p class="t2">{{bookDetails.author}}</p>
+            <p class="t3">{{bookDetails.description}}</p>
+            <p class="t4">Genre: {{bookDetails.genre}}</p>
+            <div class="buttons">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <!-- <input type="hidden" name="book" value="{{ bookDetails.id }}"> -->
+                    <button type="submit" name="read" id="mybutton" class="read">Mark as Read</button>
+                </form>
+                <!-- <button id="icon" onclick="changeIcon()" class="like"><i class="fa-regular fa-heart"></i></button> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="review">
+
+        <div>
+            <p class="r">Reviews</p>
+            <form action="" method="POST" class="searchbar1">
+                {% csrf_token %}
+                <input name="review" type="search"  placeholder="Write a review"/>
+                <button type="submit">Post</i></button> 
+            </form>
+        </div>
+        <div class="other">
+            {% for review in reviews %}
+            <div class="rev">
+                <div class="user">
+                <img class="pfp" src="{{review.user.profile.profileimg.url}}" alt="{{review.user}}">
+                <!-- <p>{{review.user}}</p> -->
+                </div>
+                <div class="revtext"><p>{{review.text}}</p></div>
+                
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    
+{% endblock %}

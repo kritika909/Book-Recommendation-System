@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/9d63a7fb7b.js" crossorigin="anonymous"></script>
+    <title>BookNook</title>   
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="/dashboard/">scribble</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/dashboard/" class="navlink">Home</a></li>
+                    <li><a href="/recommendations/" class="navlink">Recommendations</a></li>
+                    <li><a href="" class="navlink">Profile</a></li>
+                    <li><a href="" class="navlink">Setting</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div>
+                <form action="" class="searchbar">
+                    <input type="search"  placeholder="Explore"/>
+                    <button type="submit"><i class="fa fa-search"></i></button> 
+                </form>
+            </div>
+            
+            <div class="content">
+               {% block content %}
+               {% endblock %}
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // function changeText() {
+        //     const button = document.getElementById('myButton');
+        //     button.textContent = "Read"; // Changes the button text
+        // }
+        const markAsReadButton = document.getElementById('mybutton');
+
+    markAsReadButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the form submission
+        markAsReadButton.innerText = "Read"; // Change button text
+        markAsReadButton.disabled = true;
+    });
+
+
+        function changeIcon() {
+            const icon = document.getElementById('icon');
+            // Toggle between two icons
+            if (icon.classList.contains('fa-regular fa-heart')) {
+                icon.classList.remove('fa-regular fa-heart');
+                icon.classList.add('fa-solid fa-heart');
+                icon.style.color= '#f90101';
+            } else {
+                icon.classList.remove('fa-solid fa-heart');
+                icon.style.color= '#141414';
+                icon.classList.add('fa-regular fa-heart');
+            }
+        }
+     </script>
+
+
+</body>

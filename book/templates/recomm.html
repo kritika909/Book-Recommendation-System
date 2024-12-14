@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="lib">
+    {% for rec in recs %}
+    <div class="book">
+        <img src="{{rec.immage.url}}" alt="{{rec.title}}">
+        <p>{{rec.title}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

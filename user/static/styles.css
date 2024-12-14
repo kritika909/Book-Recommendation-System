@@ -1,0 +1,115 @@
+body{
+    background-color: #141414;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 100px 500px;
+    /* height: 100vh; */
+}
+.title{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+.title p{
+    color: #f4f4f4;
+    font-family: 'Poppins';
+    font-size: 32px;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    /* padding: 50px; */
+}
+.form button{
+    
+    border: 0;
+    /* border-radius: 10px; */
+    /* width: 500px; */
+    height: 40px;
+    background-color: #75D8A2;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+input{
+    width: 600px;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    color: #f4f4f4;
+    
+}
+.unm{
+    width: 600px;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    color: #f4f4f4;
+}
+/* .input[type=text]{
+    width: 600px;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    color: #f4f4f4;
+
+} */
+.form label{
+    color: #f4f4f4;
+    font-family: "Poppins";
+}
+::placeholder{
+    color: #a6a6a6;
+}
+.signup a{
+    color: #75D8A2;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+.signup{
+    margin-top: 20px;
+}
+
+
+.log{
+    box-sizing: border-box;
+    color: transparent;
+    border: 1px solid #75D8A2;
+    border-radius: 10px;
+    color: #f4f4f4;
+    width: 82px;
+    height: 44px;
+    padding: 10px 15px;
+}
+.sign{
+    box-sizing: border-box;
+    background-color: #75D8A2;
+    /* border: 1px solid #75D8A2; */
+    border-radius: 10px;
+    color: #141414;
+    width: 82px;
+    height: 44px;
+    padding: 10px 15px;
+    margin-left: 10px;
+
+}
+.logo{
+    font-family: Poppins;
+    color: #75D8A2;
+}
